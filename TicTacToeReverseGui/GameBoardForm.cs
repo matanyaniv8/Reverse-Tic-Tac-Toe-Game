@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Net.WebRequestMethods;
 using GameLogic = ReverseTicTacToeLogic.ReverseTicTacToeLogic;
 
 namespace TicTacToeReverseGui
@@ -47,17 +49,12 @@ namespace TicTacToeReverseGui
 
         private void setLabelsValues()
         {
-            FirstPlayerLabel.Text = $"{m_FirstPlayerName}: {m_FirstPlayerScore.ToString()} \t {m_SecondPlayerName}: {m_SecondPlayerScore.ToString()}";
+            FirstPlayerLabel.Text = $@"{m_FirstPlayerName}: {m_FirstPlayerScore.ToString()}         {m_SecondPlayerName}: {m_SecondPlayerScore.ToString()}";
         }
 
         private void setLabelsPosition()
         {
             setLabelsValues();
-/*            int gridHeight = m_BoardSize * k_CellSize;
-            int label_Height = this.Height - this.ClientSize.Height + 4 * k_CellSize +10;
-
-            FirstPlayerLabel.Top = label_Height ;
-            FirstPlayerLabel.Left = this.Width / 9;*/
             FirstPlayerLabel.TextAlign = ContentAlignment.BottomCenter ;
         }
 
@@ -76,14 +73,15 @@ namespace TicTacToeReverseGui
         {
             Button button = new Button();
             string buttonLocationAsIdentifier = $"{i_ColNumber},{i_RowNumber}";
-            
-            button.Size = new Size(m_CellSize -2, m_CellSize-2);
-            //button.Padding = new Padding(5);
+            int distanceBetweenButtons = 2;
+
+            button.Size = new Size(m_CellSize, m_CellSize);
+            button.Padding = new Padding(5);
             button.Tag = buttonLocationAsIdentifier;
             button.Location = new Point((m_CellSize+10) * i_RowNumber + 5, (m_CellSize +10) * i_ColNumber +5);
             button.Click += Butten_Clicked;
             this.Controls.Add(button);
-            button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button.Font = new Font(button.Font.FontFamily, button.Font.Size + 10f, FontStyle.Bold);
         }
 
         private void Butten_Clicked(object sender, EventArgs e)
@@ -120,10 +118,10 @@ namespace TicTacToeReverseGui
 
             if (m_GameLogic.IsThereAWin())
             {
+                winnerName = updateScoreOnAWin();
                 message = string.Format($@"The Winner is {winnerName}!
 {k_AskUserToPlayAnotherRoundMessage}");
                 isAPopWindowNeedsToBeSent = true;
-                winnerName = updateScoreOnAWin();
                 messageCaption = k_WinningCaptions;
             }
             else if (m_GameLogic.IsThereTie())
@@ -158,7 +156,7 @@ namespace TicTacToeReverseGui
         }
         private void askUserToPlayAnotherRound(String i_Message, string i_PopUpWindowTitle)
         {
-            DialogResult usersAnswer = MessageBox.Show(i_Message, i_PopUpWindowTitle, MessageBoxButtons.YesNo);
+            DialogResult usersAnswer = MessageBox.Show(i_Message, i_PopUpWindowTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
             if (usersAnswer == DialogResult.Yes)
             {
@@ -184,6 +182,7 @@ namespace TicTacToeReverseGui
             string btnLabel = "";
             string btnTag = "";
             Button cellBtn = null;
+
             setLabelsPosition();
 
             for (int row = 0; row < m_BoardSize; row++)
