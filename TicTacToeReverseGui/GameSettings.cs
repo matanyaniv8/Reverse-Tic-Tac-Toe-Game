@@ -62,10 +62,12 @@ namespace TicTacToeReverseGui
             if(SecondPlayerCheck.Checked == true)
             {
                 Player2TextBox.Enabled = true;
+                Player2TextBox.BackColor = Color.White;
                 Player2TextBox.Text = string.Empty;
             }
             else
             {
+                Player2TextBox.BackColor = System.Drawing.SystemColors.ControlLight;
                 Player2TextBox.Enabled = false;
                 Player2TextBox.Text = k_DefualtPlayer2Text;
             }
