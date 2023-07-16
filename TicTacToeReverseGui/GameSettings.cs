@@ -15,16 +15,6 @@ namespace TicTacToeReverseGui
             InitializeComponent();
         }
 
-        private void GameSettings_BackColorChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GameSettings_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Player2TextBox_TextChanged(object sender, EventArgs e)
         {
             m_SecondPlayerName = Player2TextBox.Text;

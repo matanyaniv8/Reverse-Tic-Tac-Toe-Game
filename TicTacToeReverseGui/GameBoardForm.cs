@@ -29,14 +29,10 @@ namespace TicTacToeReverseGui
             m_SecondPlayerName = i_SecondPlayerName;
         }
 
-        private void FirstPlayerName_Click(object sender, EventArgs e)
-        {
-        }
-
         private void GameBoardForm_Load(object sender, EventArgs e)
         {
             int gridWidth = m_BoardSize * (m_CellSize +10);
-            int gridHeight = (m_BoardSize + 2) * m_CellSize;
+            int gridHeight = (m_BoardSize) * m_CellSize + 130;
 
             this.ClientSize = new Size(gridWidth, gridHeight);
             setLabelsPosition();
@@ -45,13 +41,24 @@ namespace TicTacToeReverseGui
 
         private void setLabelsValues()
         {
-            FirstPlayerLabel.Text = $@"{m_FirstPlayerName}: {m_FirstPlayerScore.ToString()}         {m_SecondPlayerName}: {m_SecondPlayerScore.ToString()}";
+            FirstPlayerLabel.Text = $@"{m_FirstPlayerName}: {m_FirstPlayerScore.ToString()}";
+            SecondPlayerLabel.Text = $@"{ m_SecondPlayerName}: { m_SecondPlayerScore.ToString()}";
         }
 
         private void setLabelsPosition()
         {
             setLabelsValues();
-            FirstPlayerLabel.TextAlign = ContentAlignment.BottomCenter ;
+
+            int labelsTotalWidth = FirstPlayerLabel.Width + SecondPlayerLabel.Width ;
+            int remainingWidth = this.ClientSize.Width - labelsTotalWidth;
+            int margin = remainingWidth / 8;
+            int startingPosition = (this.ClientSize.Width - labelsTotalWidth - margin) / 3;
+            int labelsTop = (this.ClientSize.Height - 150) + m_CellSize; 
+
+            FirstPlayerLabel.Top = labelsTop;
+            FirstPlayerLabel.Left = startingPosition + margin;
+            SecondPlayerLabel.Top = labelsTop;
+            SecondPlayerLabel.Left = FirstPlayerLabel.Right + margin;
         }
 
         private void initializeButtons()

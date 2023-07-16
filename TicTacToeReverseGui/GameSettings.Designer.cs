@@ -243,8 +243,6 @@ namespace TicTacToeReverseGui
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameSettings";
-            this.Load += new System.EventHandler(this.GameSettings_Load);
-            this.BackColorChanged += new System.EventHandler(this.GameSettings_BackColorChanged);
             ((System.ComponentModel.ISupportInitialize)(this.NumOfRows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumOfCols)).EndInit();
             this.ResumeLayout(false);
