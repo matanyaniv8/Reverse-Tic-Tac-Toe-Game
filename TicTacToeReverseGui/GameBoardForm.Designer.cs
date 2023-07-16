@@ -37,24 +37,23 @@
             this.FirstPlayerLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FirstPlayerLabel.AutoSize = true;
             this.FirstPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstPlayerLabel.Location = new System.Drawing.Point(106, 402);
-            this.FirstPlayerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FirstPlayerLabel.Location = new System.Drawing.Point(212, 773);
+            this.FirstPlayerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstPlayerLabel.Name = "FirstPlayerLabel";
-            this.FirstPlayerLabel.Size = new System.Drawing.Size(202, 20);
+            this.FirstPlayerLabel.Size = new System.Drawing.Size(391, 37);
             this.FirstPlayerLabel.TabIndex = 100;
             this.FirstPlayerLabel.Text = "Player 1 : 0     Player 2:0";
             this.FirstPlayerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.FirstPlayerLabel.Click += new System.EventHandler(this.FirstPlayerName_Click);
             // 
             // GameBoardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 437);
+            this.ClientSize = new System.Drawing.Size(844, 840);
             this.Controls.Add(this.FirstPlayerLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "GameBoardForm";
             this.Text = "TicTacToeMisere";

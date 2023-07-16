@@ -31,7 +31,6 @@ namespace TicTacToeReverseGui
 
         private void FirstPlayerName_Click(object sender, EventArgs e)
         {
-
         }
 
         private void GameBoardForm_Load(object sender, EventArgs e)
@@ -42,7 +41,6 @@ namespace TicTacToeReverseGui
             this.ClientSize = new Size(gridWidth, gridHeight);
             setLabelsPosition();
             initializeButtons();
-
         }
 
         private void setLabelsValues()
@@ -99,9 +97,9 @@ namespace TicTacToeReverseGui
                 ClickedButton.Enabled = false;
                 printBoard();
             }
-            catch(Exception ex)
+            catch(Exception exceptionToCatch)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(exceptionToCatch.Message);
             }
 
             proceedGame();

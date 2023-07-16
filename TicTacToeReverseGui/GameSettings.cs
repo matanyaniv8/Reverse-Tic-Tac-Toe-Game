@@ -20,15 +20,6 @@ namespace TicTacToeReverseGui
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-        }
-
         private void GameSettings_Load(object sender, EventArgs e)
         {
 
@@ -63,11 +54,6 @@ namespace TicTacToeReverseGui
                 Player2TextBox.Enabled = false;
                 Player2TextBox.Text = k_DefualtPlayer2Text;
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Player1TextBox_TextChanged(object sender, EventArgs e)

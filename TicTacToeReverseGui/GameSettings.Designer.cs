@@ -69,10 +69,9 @@ namespace TicTacToeReverseGui
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(180, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = ":Players";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Player1TextBox
             // 
@@ -81,7 +80,7 @@ namespace TicTacToeReverseGui
             this.Player1TextBox.Location = new System.Drawing.Point(105, 65);
             this.Player1TextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Player1TextBox.Name = "Player1TextBox";
-            this.Player1TextBox.Size = new System.Drawing.Size(235, 21);
+            this.Player1TextBox.Size = new System.Drawing.Size(235, 35);
             this.Player1TextBox.TabIndex = 2;
             this.Player1TextBox.TextChanged += new System.EventHandler(this.Player1TextBox_TextChanged);
             // 
@@ -96,7 +95,7 @@ namespace TicTacToeReverseGui
             this.Player2TextBox.Location = new System.Drawing.Point(105, 131);
             this.Player2TextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Player2TextBox.Name = "Player2TextBox";
-            this.Player2TextBox.Size = new System.Drawing.Size(235, 21);
+            this.Player2TextBox.Size = new System.Drawing.Size(235, 35);
             this.Player2TextBox.TabIndex = 3;
             this.Player2TextBox.Text = "[Computer]";
             this.Player2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -121,7 +120,7 @@ namespace TicTacToeReverseGui
             0,
             0});
             this.NumOfRows.Name = "NumOfRows";
-            this.NumOfRows.Size = new System.Drawing.Size(48, 23);
+            this.NumOfRows.Size = new System.Drawing.Size(48, 38);
             this.NumOfRows.TabIndex = 4;
             this.NumOfRows.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumOfRows.Value = new decimal(new int[] {
@@ -138,7 +137,7 @@ namespace TicTacToeReverseGui
             this.label2.Location = new System.Drawing.Point(39, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(98, 30);
             this.label2.TabIndex = 5;
             this.label2.Text = "Rows :";
             // 
@@ -149,10 +148,9 @@ namespace TicTacToeReverseGui
             this.label3.Location = new System.Drawing.Point(17, 179);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.Size = new System.Drawing.Size(191, 37);
             this.label3.TabIndex = 6;
             this.label3.Text = "Board Size :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // NumOfCols
             // 
@@ -170,7 +168,7 @@ namespace TicTacToeReverseGui
             0,
             0});
             this.NumOfCols.Name = "NumOfCols";
-            this.NumOfCols.Size = new System.Drawing.Size(49, 23);
+            this.NumOfCols.Size = new System.Drawing.Size(49, 38);
             this.NumOfCols.TabIndex = 7;
             this.NumOfCols.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumOfCols.Value = new decimal(new int[] {
@@ -187,18 +185,19 @@ namespace TicTacToeReverseGui
             this.label4.Location = new System.Drawing.Point(185, 242);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 16);
+            this.label4.Size = new System.Drawing.Size(85, 30);
             this.label4.TabIndex = 8;
             this.label4.Text = "Cols :";
             // 
             // Player1Label
             // 
             this.Player1Label.AutoSize = true;
+            this.Player1Label.Enabled = false;
             this.Player1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player1Label.Location = new System.Drawing.Point(24, 65);
             this.Player1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Player1Label.Name = "Player1Label";
-            this.Player1Label.Size = new System.Drawing.Size(73, 17);
+            this.Player1Label.Size = new System.Drawing.Size(130, 31);
             this.Player1Label.TabIndex = 9;
             this.Player1Label.Text = "Player1 :";
             // 
@@ -209,7 +208,7 @@ namespace TicTacToeReverseGui
             this.SecondPlayerCheck.Location = new System.Drawing.Point(12, 131);
             this.SecondPlayerCheck.Margin = new System.Windows.Forms.Padding(4);
             this.SecondPlayerCheck.Name = "SecondPlayerCheck";
-            this.SecondPlayerCheck.Size = new System.Drawing.Size(92, 21);
+            this.SecondPlayerCheck.Size = new System.Drawing.Size(162, 35);
             this.SecondPlayerCheck.TabIndex = 11;
             this.SecondPlayerCheck.Text = "Player2 :";
             this.SecondPlayerCheck.UseVisualStyleBackColor = true;
@@ -218,7 +217,7 @@ namespace TicTacToeReverseGui
             // GameSettings
             // 
             this.AcceptButton = this.StartButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
