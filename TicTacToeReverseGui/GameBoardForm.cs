@@ -85,6 +85,7 @@ namespace TicTacToeReverseGui
             button.Click += Butten_Clicked;
             this.Controls.Add(button);
             button.Font = new Font(button.Font.FontFamily, button.Font.Size + 10f, FontStyle.Bold);
+            button.TabStop = false;
         }
 
         private void Butten_Clicked(object sender, EventArgs e)

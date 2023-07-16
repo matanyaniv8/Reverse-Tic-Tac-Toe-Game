@@ -58,7 +58,7 @@ namespace TicTacToeReverseGui
 
         private void NumOfCols_ValueChanged(object sender, EventArgs e)
         {
-            NumOfRows.Value = NumOfRows.Value;
+            NumOfRows.Value = NumOfCols.Value;
         }
     }
 }

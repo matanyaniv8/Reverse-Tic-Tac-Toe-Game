@@ -82,6 +82,7 @@ namespace TicTacToeReverseGui
             this.Player1TextBox.Name = "Player1TextBox";
             this.Player1TextBox.Size = new System.Drawing.Size(235, 35);
             this.Player1TextBox.TabIndex = 2;
+            this.Player1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Player1TextBox.TextChanged += new System.EventHandler(this.Player1TextBox_TextChanged);
             // 
             // Player2TextBox
