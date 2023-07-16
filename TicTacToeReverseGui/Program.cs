@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Forms;
 
 namespace TicTacToeReverseGui
 {
@@ -10,8 +6,15 @@ namespace TicTacToeReverseGui
     {
         public static void Main()
         {
-             GameSettings settings = new GameSettings();
-             settings.ShowDialog();
+             runGame();
+        }
+
+        private static void runGame()
+        {
+            Application.EnableVisualStyles();
+
+            GameSettings gameSettingForm = new GameSettings();
+            gameSettingForm.ShowDialog();
         }
     }
 }
