@@ -173,7 +173,7 @@ namespace TicTacToeReverseGui
             this.NumOfCols.TabIndex = 7;
             this.NumOfCols.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumOfCols.Value = new decimal(new int[] {
-            10,
+            4,
             0,
             0,
             0});

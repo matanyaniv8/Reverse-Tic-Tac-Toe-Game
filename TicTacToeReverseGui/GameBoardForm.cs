@@ -32,7 +32,7 @@ namespace TicTacToeReverseGui
         private void GameBoardForm_Load(object sender, EventArgs e)
         {
             int gridWidth = m_BoardSize * (m_CellSize +10);
-            int gridHeight = (m_BoardSize) * m_CellSize + 130;
+            int gridHeight = (m_BoardSize +2) * m_CellSize;
 
             this.ClientSize = new Size(gridWidth, gridHeight);
             setLabelsPosition();
@@ -53,7 +53,7 @@ namespace TicTacToeReverseGui
             int remainingWidth = this.ClientSize.Width - labelsTotalWidth;
             int margin = remainingWidth / 8;
             int startingPosition = (this.ClientSize.Width - labelsTotalWidth - margin) / 3;
-            int labelsTop = (this.ClientSize.Height - 150) + m_CellSize; 
+            int labelsTop =this.ClientSize.Height - m_CellSize; 
 
             FirstPlayerLabel.Top = labelsTop;
             FirstPlayerLabel.Left = startingPosition + margin;
