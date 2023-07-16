@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Net.WebRequestMethods;
 using GameLogic = ReverseTicTacToeLogic.ReverseTicTacToeLogic;
 
 namespace TicTacToeReverseGui
@@ -10,7 +8,7 @@ namespace TicTacToeReverseGui
     public partial class GameBoardForm : Form
     {
         private const string k_WinningCaptions = "A Win!";
-        private const string k_TieCaptions = "A Tie";
+        private const string k_TieCaptions = "A Tie!";
         private const string k_AskUserToPlayAnotherRoundMessage = "Would Like To Play Another Round?";
         private string m_FirstPlayerName = "";
         private int m_FirstPlayerScore = 0;
@@ -73,12 +71,12 @@ namespace TicTacToeReverseGui
         {
             Button button = new Button();
             string buttonLocationAsIdentifier = $"{i_ColNumber},{i_RowNumber}";
-            int distanceBetweenButtons = 2;
+            int distanceBetweenButtons = 9;
 
             button.Size = new Size(m_CellSize, m_CellSize);
             button.Padding = new Padding(5);
             button.Tag = buttonLocationAsIdentifier;
-            button.Location = new Point((m_CellSize+10) * i_RowNumber + 5, (m_CellSize +10) * i_ColNumber +5);
+            button.Location = new Point((m_CellSize+ distanceBetweenButtons) * i_RowNumber + distanceBetweenButtons / 2, (m_CellSize + distanceBetweenButtons/2) * i_ColNumber + distanceBetweenButtons/2);
             button.Click += Butten_Clicked;
             this.Controls.Add(button);
             button.Font = new Font(button.Font.FontFamily, button.Font.Size + 10f, FontStyle.Bold);

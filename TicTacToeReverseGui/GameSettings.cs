@@ -39,8 +39,6 @@ namespace TicTacToeReverseGui
             m_SecondPlayerName = Player2TextBox.Text;
         }
 
-
-
         private void StartButton_Click(object sender, EventArgs e)
         {
             int boardSizeFromSetting = (int)NumOfRows.Value;
